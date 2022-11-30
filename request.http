@@ -1,0 +1,99 @@
+// formulario usuarios 
+###
+POST http://localhost:9000/api/user HTTP/1.1
+Content-Type: application/json
+
+{
+"usuario": "Matilda",
+"contrasena": "xyz746",
+"nombre": "Matilda Lina Mestre",
+"email": "mmestre@mail.com"
+}
+
+### 
+GET http://localhost:9000/api/users http/1.1
+
+### 
+GET http://localhost:9000/api/users/6385fcd9b5331fe3e52c2a06 http/1.1
+
+###
+PUT http://localhost:9000/api/users/6385fcd9b5331fe3e52c2a06 http/1.1
+Content-Type: application/json
+
+{
+"usuario": "Tomasa maria",
+"contrasena": "I746*ll",
+"nombre": "Tomasa Perea",
+"email": "tperea@mail.com"
+}
+
+###
+DELETE http://localhost:9000/api/users/638666b5e3c4bd5dfb993aba http/1.1
+
+//**************************************
+// Formulario ordenes
+
+###
+POST http://localhost:9000/api/pedido HTTP/1.1
+Content-Type: application/json
+
+{
+"usuario": "Pedro",
+"fecha_recogida": "2022-11-29",
+"hora_recogida": "08",
+"ancho": "112",
+"alto": "115",
+"largo": "120",
+"peso": "18",
+"delicado": "Si",
+"estado": "Guardado   ",
+"nombre_origen": "Pedro Perez",
+"identificacion_origen": "40963125",
+"direccion_origen": "calle 1 carrera 1",
+"telefono_origen": "123456   ",
+"ciudad_origen": "Bogota",
+"pais_origen": "Colombia",
+"nombre_destino": "Laura Angel",
+"identificacion_destino": "1020456977",
+"telefono_destino": "456789",
+"direccion_destino": "calle 100 carrera 10",
+"ciudad_destino": "Bogota",
+"pais_destino": "Colombia"
+}
+
+###
+GET http://localhost:9000/api/pedidos http/1.1
+
+###
+GET http://localhost:9000/api/pedidos/6386b206dad01d4384d35d4d  http/1.1
+
+###
+PUT http://localhost:9000/api/pedidos/6386b206dad01d4384d35d4d http/1.1
+Content-Type: application/json
+
+{
+"usuario": "Pedro",
+"fecha_recogida": "2022-01-29T05:00:00.000Z",
+"hora_recogida": "08",
+"ancho": "112",
+"alto": "115",
+"largo": "120",
+"peso": "18",
+"delicado": "Si",
+"estado": "Guardado   ",
+"nombre_origen": "Pedro Perez",
+"identificacion_origen": "40963125   ",
+"direccion_origen": "calle 1 carrera 1 ",
+"telefono_origen": "123456   ",
+"ciudad_origen": "Bogota",
+"pais_origen": "Colombia",
+"nombre_destino": "Teresita Lopez",
+"identificacion_destino": "1020456977",
+"telefono_destino": "456789   ",
+"direccion_destino": "calle 100 carrera 10",
+"ciudad_destino": "Bogota",
+"pais_destino": "Colombia"
+}
+
+###
+DELETE http://localhost:9000/api/pedidos/6386be9eef5a00aae7851928 http/1.1
